@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaVest Capital | Smart Investing</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #07111f;
+    color: white;
+}
+
+header {
+    background: #0c1b2d;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d9b45b;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d9b45b;
+}
+
+.hero {
+    padding: 90px 7%;
+    text-align: center;
+    background: linear-gradient(135deg,#07111f,#142b47);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #b7c4d3;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+button {
+    background: #d9b45b;
+    color: #07111f;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.hero button {
+    margin-top: 30px;
+}
+
+section {
+    padding: 60px 7%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #d9b45b;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #102137;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #233b58;
+}
+
+.card h3 {
+    color: #d9b45b;
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin: 12px 0;
+    color: #c3cfdd;
+}
+
+.card button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.form-box {
+    max-width: 500px;
+    margin: auto;
+    background: #102137;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background: #07111f;
+    border: 1px solid #304660;
+    color: white;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #c3cfdd;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0c1b2d;
+    color: #8292a6;
+}
+
+.notice {
+    background: #332d18;
+    color: #e9d49a;
+    padding: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+#message {
+    margin-top: 15px;
+    color: #d9b45b;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="notice">
+DEMO WEBSITE — No real investments, guaranteed returns, or financial transactions.
+</div>
+
+<header>
+
+<div class="logo">NovaVest Capital</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#plans">Plans</a>
+<a href="#register">Register</a>
+<a href="#login">Login</a>
+<a href="#dashboard">Dashboard</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<h1>Invest Smarter.<br>Build Your Future.</h1>
+
+<p>
+Explore investment opportunities, learn about financial growth,
+and manage your investment portfolio with NovaVest Capital.
+</p>
+
+<button onclick="location.href='#plans'">
+Explore Plans
+</button>
+
+</section>
+
+<section id="plans">
+
+<h2>Investment Plans</h2>
+
+<div class="plans">
+
+<div class="card">
+<h3>Starter</h3>
+<p>Example Amount: $100</p>
+<p>Example Duration: 30 Days</p>
+<p>Illustrative Return: 2%</p>
+<button onclick="selectPlan('Starter',100)">
+Select Plan
+</button>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<p>Example Amount: $500</p>
+<p>Example Duration: 60 Days</p>
+<p>Illustrative Return: 5%</p>
+<button onclick="selectPlan('Growth',500)">
+Select Plan
+</button>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p>Example Amount: $1,000</p>
+<p>Example Duration: 90 Days</p>
+<p>Illustrative Return: 8%</p>
+<button onclick="selectPlan('Premium',1000)">
+Select Plan
+</button>
+</div>
+
+<div class="card">
+<h3>Elite</h3>
+<p>Example Amount: $5,000</p>
+<p>Example Duration: 180 Days</p>
+<p>Illustrative Return: 12%</p>
+<button onclick="selectPlan('Elite',5000)">
+Select Plan
+</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="register">
+
+<h2>Create Account</h2>
+
+<div class="form-box">
+
+<form id="registerForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Country</option>
+<option>Nigeria</option>
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>Other</option>
+</select>
+
+<input type="date" required>
+
+<input type="password" placeholder="Create Password" required>
+
+<input type="password" placeholder="Confirm Password" required>
+
+<label>
+<input type="checkbox" required style="width:auto">
+I agree to the demo terms.
+</label>
+
+<button type="submit">Create Demo Account</button>
+
+</form>
+
+<p id="registerMessage"></p>
+
+</div>
+
+</section>
+
+<section id="login">
+
+<h2>Login</h2>
+
+<div class="form-box">
+
+<form id="loginForm">
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="password" placeholder="Password" required>
+
+<button type="submit">Demo Login</button>
+
+</form>
+
+<p id="loginMessage"></p>
+
+</div>
+
+</section>
+
+<section id="verification">
+
+<h2>Identity Verification Demo</h2>
+
+<div class="form-box">
+
+<label>Identification Type</label>
+
+<select id="idType">
+<option>National ID</option>
+<option>International Passport</option>
+<option>Driver's License</option>
+</select>
+
+<label>Upload Sample ID (Demo Only)</label>
+
+<input type="file" accept="image/*,.pdf">
+
+<button onclick="verifyDemo()">
+Simulate Verification
+</button>
+
+<p id="verificationMessage"></p>
+
+</div>
+
+</section>
+
+<section id="deposit">
+
+<h2>Deposit Demo</h2>
+
+<div class="form-box">
+
+<label>Amount</label>
+
+<input type="number" id="depositAmount" placeholder="Enter Amount">
+
+<label>Payment Method</label>
+
+<select id="paymentMethod">
+<option>Bank Transfer (Demo)</option>
+<option>Debit Card (Demo)</option>
+<option>Crypto (Demo)</option>
+</select>
+
+<button onclick="depositDemo()">
+Simulate Deposit
+</button>
+
+<p id="depositMessage"></p>
+
+</div>
+
+</section>
+
+<section id="dashboard">
+
+<h2>Investor Dashboard</h2>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Account Balance</h3>
+<p id="balance">$0.00</p>
+</div>
+
+<div class="card">
+<h3>Selected Plan</h3>
+<p id="selectedPlan">None</p>
+</div>
+
+<div class="card">
+<h3>Account Status</h3>
+<p>Demo Account</p>
+</div>
+
+<div class="card">
+<h3>Verification</h3>
+<p>Demo Only</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 NovaVest Capital</p>
+<p>Educational Investment Website Demo</p>
+
+</footer>
+
+<script>
+
+let balance = 0;
+let plan = "None";
+
+function selectPlan(name,amount) {
+
+    plan = name;
+
+    document.getElementById("selectedPlan").innerText =
+    name + " - $" + amount;
+
+    alert(name + " plan selected (Demo)");
+
+    location.href = "#register";
+
+}
+
+document.getElementById("registerForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    document.getElementById("registerMessage")
+    .innerText =
+    "Demo registration successful! No account was created.";
+
+});
+
+document.getElementById("loginForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    document.getElementById("loginMessage")
+    .innerText =
+    "Demo login successful! No authentication occurred.";
+
+});
+
+function verifyDemo(){
+
+    document.getElementById("verificationMessage")
+    .innerText =
+    "Demo verification complete. No identity was verified.";
+
+}
+
+function depositDemo(){
+
+    let amount =
+    Number(document.getElementById("depositAmount").value);
+
+    if(amount <= 0 || !Number.isFinite(amount)){
+
+        document.getElementById("depositMessage")
+        .innerText = "Enter a valid demo amount.";
+
+        return;
+
+    }
+
+    balance += amount;
+
+    document.getElementById("balance")
+    .innerText = "$" + balance.toFixed(2);
+
+    document.getElementById("depositMessage")
+    .innerText =
+    "Demo deposit recorded locally. No money was transferred.";
+
+}
+
+</script>
+
+</body>
+</html>
